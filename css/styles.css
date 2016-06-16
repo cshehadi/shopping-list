@@ -1,0 +1,86 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #67989a;
+    margin-top: 0px;
+}
+
+.header {
+    height: 5em;
+    background-color: #c0d8d9;
+    border-top: thin solid #c0d8d9;
+    border-bottom: thin solid #063e3e;
+    margin-top: 0px;
+    margin-bottom: 2em;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.list {
+    width: 450px;
+    margin: 0 auto;
+    border: thin solid #666;
+    padding: 2em;
+    box-shadow: 3px 3px #063e3e;
+    background-color: white;
+    font-family: 'PT Serif', serif;
+}
+
+@media (max-width: 510px) {
+    .list {
+        width: 400px;
+    }
+}
+
+@media (max-width: 410px) {
+    .list {
+        width: 310px;
+    }
+}
+
+.list h3 {
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 3px;
+}
+
+.list > form > input {
+    width: 100%;
+}
+
+.list ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+.list ul > li {
+    padding: 3px;
+}
+
+.completed {
+    color: #aaa;
+    font-style: italic;
+}
+
+.list label {
+    display: block;
+    padding-left: 18px;
+}
+
+.list input[type=checkbox] {
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: bottom;
+    position: relative;
+    top: 4px;
+}
