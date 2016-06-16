@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Shopping List</title>
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+    <script src="//use.fontawesome.com/7e2621bce5.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -19,10 +20,38 @@
             </form>
             <h3>To Do</h3>
             <ul class="to-do">
-                <li><input type="checkbox" name="item"><label for="item">Milk</label></li>
-                <li><input type="checkbox" name="item"><label for="item">Bananas</label></li>
-                <li><input type="checkbox" name="item"><label for="item">Siggi's Organic Raspberry Yoghurt drink</label></li>
-                <li><input type="checkbox" name="item"><label for="item">Eggs</label></li>
+                <li>
+                    <input type="checkbox" name="item"><label for="item">Milk</label>
+                    <div class="toolbar">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" name="item"><label for="item">Bananas</label>
+                    <div class="toolbar">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" name="item"><label for="item">Siggi's Organic Raspberry Yoghurt drink</label>
+                    <div class="toolbar">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" name="item"><label for="item">Eggs</label>
+                    <div class="toolbar">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                </li>
             </ul>
             <h3>Done</h3>
             <ul class="completed">
