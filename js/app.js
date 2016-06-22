@@ -1,13 +1,9 @@
 $(document).ready(function() {
-    $('.list li').mouseenter(function () {
-        if (inPhoneView()) {
-            $(this).find('.toolbar').show();
-        }
+    $('.list').on('mouseenter', 'li', function () {
+        $(this).find('.toolbar').show();
     });
-    $('.list li').mouseleave(function () {
-        if (inPhoneView()) {
-            $(this).find('.toolbar').hide();
-        }
+    $('.list').on('mouseleave', 'li', function () {
+        $(this).find('.toolbar').hide();
     });
 
     // add new items by typing in text box
@@ -42,6 +38,11 @@ $(document).ready(function() {
         $(this).remove();
         item_checkbox.after(newLabel(item_text));
     });
+
+    // remove item when user clicks trash
+    $('.list').on('click','.fa-trash-o',function() {
+        $(this).parents('li').remove();
+    });
 });
 
 function inPhoneView() {
@@ -50,10 +51,16 @@ function inPhoneView() {
 
 function newLi(item_text) {
     return '    <li> \
-        <input type="checkbox" name="item">'+newLabel(item_text)+' \
+        <input type="checkbox" name="item">'+newLabel(item_text)+toolbar()+' \
     </li>';
 }
 
 function newLabel(item_text) {
     return '<label for="item">'+item_text+'</label>';
+}
+
+function toolbar() {
+    return '<div class="toolbar"> \
+    <i class="fa fa-trash-o" aria-hidden="true"></i> \
+    </div>';
 }

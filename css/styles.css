@@ -70,6 +70,10 @@ h1 {
     cursor: text;
 }
 
+.list ul > li > .toolbar:hover {
+    cursor: pointer;
+}
+
 .completed {
     color: #aaa;
     font-style: italic;
@@ -117,14 +121,5 @@ h1 {
 @media (max-width: 410px) {
     .list {
         width: 310px;
-    }
-    .toolbar {
-        display: block;
-    }
-    .toolbar .fa-pencil-square-o, .toolbar .fa-trash-o,  {
-        display: none;
-    }
-    .toolbar .fa-ellipsis-v {
-        display: inline-block;
     }
 }
