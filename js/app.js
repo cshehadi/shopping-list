@@ -9,8 +9,19 @@ $(document).ready(function() {
             $(this).find('.toolbar').hide();
         }
     });
+    $('input[name=add-item]').change(function() {
+        var new_item = $(this).val();
+        $(this).val(''); // empty the input box
+        $('.to-do').append(newLi(new_item)); // add the new item
+    });
 });
 
 function inPhoneView() {
     return $('.list').width() > 310;
+}
+
+function newLi(item_text) {
+    return '    <li> \
+        <input type="checkbox" name="item"><label for="item">'+item_text+'</label> \
+    </li>';
 }
