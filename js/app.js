@@ -14,6 +14,13 @@ $(document).ready(function() {
         $(this).val(''); // empty the input box
         $('.to-do').append(newLi(new_item)); // add the new item
     });
+    $('ul').on('change','input[name=item]',function() {
+        if($(this).is(':checked')) {
+            $(this).parent().appendTo('.completed');
+        } else {
+            $(this).parent().appendTo('.to-do');
+        }
+    });
 });
 
 function inPhoneView() {
