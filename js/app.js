@@ -11,15 +11,24 @@ $(document).ready(function() {
         var new_item = $(this).val();
         $(this).val(''); // empty the input box
         $('.to-do').append(newLi(new_item)); // add the new item
+        displayLists();
     });
 
     // move items between "To Do" to "Done" by clicking checkbox
     $('ul').on('change','input[name=item]',function() {
         if($(this).is(':checked')) {
             $(this).parent().appendTo('.completed');
+            displayLists();
         } else {
             $(this).parent().appendTo('.to-do');
+            displayLists();
         }
+    });
+
+    // remove item when user clicks trash
+    $('.list').on('click','.fa-trash-o',function() {
+        $(this).parents('li').remove();
+        displayLists();
     });
 
     // insert editable text box when user clicks label 
@@ -37,11 +46,6 @@ $(document).ready(function() {
         var item_checkbox = $(this).prev();
         $(this).remove();
         item_checkbox.after(newLabel(item_text));
-    });
-
-    // remove item when user clicks trash
-    $('.list').on('click','.fa-trash-o',function() {
-        $(this).parents('li').remove();
     });
 });
 
@@ -63,4 +67,15 @@ function toolbar() {
     return '<div class="toolbar"> \
     <i class="fa fa-trash-o" aria-hidden="true"></i> \
     </div>';
+}
+
+function displayLists() {
+    $('.list ul').each(function() {
+        console.log('hi');
+        if ($(this).children().length) {
+            $(this).prev().show();
+        } else {
+            $(this).prev().hide();
+        }
+    });
 }
