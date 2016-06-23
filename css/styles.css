@@ -12,11 +12,9 @@ body {
 }
 
 .header {
-    height: 5em;
     background-color: #c0d8d9;
-    border-top: thin solid #c0d8d9;
     border-bottom: thin solid #063e3e;
-    margin-top: 0px;
+    padding: 1em;
     margin-bottom: 2em;
 }
 
